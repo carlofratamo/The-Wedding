@@ -853,3 +853,27 @@
                 height: 120vh;
             }
         }
+
+        .card-10 {
+            display: flex; /* Mantieni il layout verticale */
+            flex-direction: column; /* Elementi in colonna */
+            align-items: center; /* Centra gli elementi orizzontalmente */
+            margin: 30px 0; /* Aggiungi spazio sopra e sotto la card */
+            padding: 20px; /* Aggiungi spazio interno per uniformare con altre card */
+            box-sizing: border-box; /* Garantisce che il padding non alteri la dimensione totale */
+        }
+        
+        .card-10 .desc-1 {
+            text-align: center; /* Centra il testo */
+            margin-bottom: 20px; /* Spazio tra descrizione e video */
+        }
+        
+        .card-10 .video-1 {
+            display: block;
+            width: 75% !important; /* Forza la riduzione della larghezza */
+            height: auto !important; /* Mantieni le proporzioni */
+            margin: 0 auto 20px auto; /* Centro orizzontale e margine inferiore */
+            transform: scale(0.75) !important; /* Riduce la grandezza al 75% */
+            transform-origin: center;
+        }
+        
