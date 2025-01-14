@@ -959,4 +959,22 @@
         .btn-calendar:hover {
             background-color: #b00710;
         }
+        /* Stile per la galleria */
+        #gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        #gallery img {
+            margin: 10px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        #gallery img:hover {
+            transform: scale(1.05);
+            transition: 0.3s ease;
+        }
         
