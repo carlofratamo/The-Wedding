@@ -28,7 +28,7 @@
         
         div#header {
             height: 100vh;
-            background: linear-gradient(to top, rgba(0, 0, 0, .8) 0, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, .8) 100%), url('../img/background-top4d.jpg') no-repeat center center / cover;
+            background: linear-gradient(to top, rgba(0, 0, 0, .8) 0, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, .8) 100%), url('../img/background-top5.jpg') no-repeat center center / cover;
             /* } linear-gradient(to bottom, var(--firstColor), var(--secondColor)) */
         }
         
@@ -1008,4 +1008,21 @@
         .blocker-message p {
             font-size: 18px;
         }
+        .iban-hidden {
+            background-color: #f8f9fa;
+            border: 1px solid #ced4da;
+            padding: 1px 2px;
+            border-radius: 1px;
+            cursor: pointer;
+            color: #495057;
+            font-weight: bold;
+            margin-left: 1px;
+        }
         
+        .iban-hidden:hover {
+            background-color: #e9ecef;
+            border-color: #adb5bd;
+            color: #212529;
+        }
+        
+                

@@ -283,14 +283,15 @@
                     <div id="flush-collapsefive" class="accordion-collapse collapse" aria-labelledby="flush-headingfive"
                         data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
+                            <p> "Noo dai.."
+                            </p>
                             <p> La vostra presenza è il regalo più bello, ma se volete contribuire alla realizzazione del nostro viaggio di nozze in Giappone, di seguito trovate le coordinate.
                             </p>
                             <p> Intestatario: Carlo Barbera, Anna Stallone
                             </p>
                             <p> IBAN:
                             </p>
-                            <span class="coupon" onclick="copyToClipboard('IT12L0347501605000336231360')">IT12L0347501605000336231360</span>
-
+                            <span class="iban-hidden" onclick="revealAndCopyIBAN()">Mostra e copia IBAN</span>
                         </div>
                     </div>
                 </div>
@@ -374,7 +375,27 @@
         }
     });
 </script>
+<script>
+    function revealAndCopyIBAN() {
+        const iban = 'IT12L0347501605000336231360';
+        const ibanElement = document.querySelector('.iban-hidden');
 
+        // Cambia il testo visualizzato
+        ibanElement.textContent = iban;
+
+        // Copia l'IBAN negli appunti
+        navigator.clipboard.writeText(iban)
+            .then(() => {
+                alert("IBAN copiato: " + iban);
+            })
+            .catch(err => {
+                console.error("Errore nella copia dell'IBAN", err);
+            });
+
+        // Disattiva ulteriori click
+        ibanElement.onclick = null; // Evita che si possa cliccare di nuovo
+    }
+</script>
     
 </body>
 
