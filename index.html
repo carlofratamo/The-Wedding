@@ -15,6 +15,14 @@
 </head>
 
 <body>
+    <div id="desktop-blocker" style="display: none;">
+        <div class="blocker-message">
+            <h1>Questo sito è ottimizzato solo per dispositivi mobili!</h1>
+            <p>Per un'esperienza migliore, apri il sito dal tuo smartphone.</p>
+            <p>Muy obrigado</p>
+        </div>
+    </div>
+    
 
     <header>
         <!-- header -->
@@ -41,8 +49,8 @@
                         <h1>La serie più attesa, sta arrivando!</h1>
                         <!--h3>Disponibile in anteprima domenica 01.06.25 alle 16:30</h3>-->
                         <p class="second">
-                            Disponibile in anteprima domenica 01.06.25 alle 16:30</p>  
-                        <p class="third">
+                            Disponibile in anteprima domenica <strong>01.06.25</strong> alle <strong>16:30</strong>
+                            <p class="third">
                             "The Wedding" sarà disponibile in esclusiva al Baglio Borgesati, Salemi.</p> 
                             <!-- p class="third">SS188, Salemi (TP) </p> -->
                             <a href="https://maps.google.com/?q=Baglio+Borgesati" target="_blank" class="custom-button">
@@ -89,11 +97,11 @@
 
     <div class="ligne"></div>
 
-    <div class="card-2">
+    <div class="card-2" style="margin-bottom: 0px;">
         <video class="video-1" autoplay="" playsinline="" muted="" loop="" style="width: 85%; height: auto; margin: 20px auto; display: block;">
-            <source src="img/video-tv-0828.mp4" type="video/mp4">
+            <source src="img/video-tv-0829.mp4" type="video/mp4">
         </video>
-        <div class="desc-1">
+        <div class="desc-2">
             <h1>
                 Ogni cosa a suo tempo...
             </h1>
@@ -102,7 +110,7 @@
             </p>
         </div>
     </div>
-    <div class="ligne"></div>
+    <div class="ligne" style="margin-bottom: 10px;"></div>
      <div class="card-0">
         <img src="img/mobile-0825.jpg" alt="Netflix TV" class="hideSmall">
 
@@ -136,7 +144,7 @@
             </div>
         </div>
     </div>
-    <div class="ligne"></div>
+    <div class="ligne" style="margin-bottom: 20px;"></div>
     <div class="container">
         <div class="question">
             <h1>Domande frequenti</h1>
@@ -289,7 +297,7 @@
            </div>
     </div>
     </div>
-    <div class="ligne"></div>
+    <div class="ligne" style="margin-bottom: 40px;" ></div>
     <div class="container">
         <div class="question">
             <h1>Non fartelo raccontare...</h1>
@@ -310,9 +318,10 @@
         </div>
     </div>
     </div>
-    <div class="ligne"></div>
+    <div class="ligne" ></div>
     <footer>
         <div>
+            <p><a><i>Fatto con amore da CB con l'ausilio dell'amica ChatGPT, che ringrazio.</i></a></p>
             <p><a>Domande ? Contattaci</a></p>
             <p><a href="https://wa.me/393271251139">Anna +39 3271251139</a></p>
             <p><a href="https://wa.me/393455120314">Carlo +39 3455120314</a></p>
@@ -356,6 +365,16 @@
             `${days} giorni, ${hours} ore, ${minutes} minuti, ${seconds} secondi`;
     }, 1000);
 </script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Controlla se la larghezza dello schermo è maggiore di 768px (desktop)
+        if (window.innerWidth > 768) {
+            // Mostra il messaggio di blocco
+            document.getElementById("desktop-blocker").style.display = "flex";
+        }
+    });
+</script>
+
     
 </body>
 
