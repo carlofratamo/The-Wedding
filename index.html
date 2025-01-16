@@ -19,17 +19,40 @@
     <meta property="og:description" content="Unisciti a noi per celebrare il nostro matrimonio il 1° Giugno 2025. Scopri i dettagli, conferma la tua presenza e carica le foto della giornata per condividere con noi questo momento speciale!">
     <meta property="og:image" content="./img/linkpreview.jpg"> <!-- Sostituisci con il percorso dell'immagine rappresentativa -->
     <meta property="og:url" content="https://the-wedding-gamma.vercel.app/"> <!-- Sostituisci con l'URL del tuo sito -->
-    <audio id="netflix-sound" preload="auto">
+    <div id="intro-overlay">
+        <div id="intro-content">
+            <img id="intro-logo" src="./img/openWEDFLIX.png" alt="Wedflix">
+            <p>Utente "Invitato" selezionato.</p>
+            <p>Tocca per iniziare</p>
+        </div>
+    </div>
+    
+    <audio id="netflix-audio">
         <source src="./audio/jingle-netflix.mp3" type="audio/mpeg">
-        Il tuo browser non supporta l'audio HTML5.
+        Your browser does not support the audio element.
     </audio>
+    
     <script>
-        window.onload = function() {
-            const sound = document.getElementById("netflix-sound");
-            sound.play().catch(err => {
-                console.log("Errore nella riproduzione del suono: ", err);
-            });
-        };
+        document.getElementById("intro-overlay").onclick = function () {
+    // Riproduci il jingle
+    const audio = document.getElementById("netflix-audio");
+    audio.play().catch(err => console.error("Errore audio:", err));
+
+    // Anima il logo e dissolve l'overlay
+    const logo = document.getElementById("intro-logo");
+    logo.classList.add("grow"); // Aggiunge l'effetto ingrandimento
+
+    const overlay = document.getElementById("intro-overlay");
+    setTimeout(() => {
+        overlay.style.opacity = 0; // Dissolve l'overlay
+    }, 100); // Piccola attesa prima della dissolvenza
+
+    // Rimuove l'overlay dopo la dissolvenza
+    setTimeout(() => {
+        overlay.style.display = "none";
+    }, 1000); // Tempo della dissolvenza (1 secondo)
+};
+
     </script>
 </head>
 
