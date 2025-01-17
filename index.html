@@ -61,26 +61,31 @@
 
 <body>
     <div id="loading-screen">
-        <img id="loading-logo" src="img/openWEDFLIX.png" alt="Wedflix">
+        <img id="loading-logo" src="img/openWEDFLIX.png" alt="Wedflix" style="width: 388px; height: auto;">
     </div>
     
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-    const loadingScreen = document.getElementById("loading-screen");
-    const loadingLogo = document.getElementById("loading-logo");
-
-    // Mostra il logo per 1 secondo, poi inizia la dissolvenza
-    setTimeout(() => {
-        loadingScreen.style.opacity = "0"; // Avvia la dissolvenza
-        loadingLogo.style.opacity = "0"; // Dissolvi anche il logo
-    }, 1000); // Mostra il logo per 1 secondo
-
-    // Rimuovi la schermata di caricamento completamente dopo la dissolvenza
-    setTimeout(() => {
-        loadingScreen.style.display = "none";
-    }, 3000); // Tempo totale: 1s (logo) + 2s (dissolvenza)
-});
+            const loadingScreen = document.getElementById("loading-screen");
+            const loadingLogo = document.getElementById("loading-logo");
+            const scrollIndicator = document.getElementById("scrollIndicator");
+    
+            // Mostra il logo per 1 secondo, poi inizia la dissolvenza
+            setTimeout(() => {
+                loadingScreen.style.opacity = "0"; // Avvia la dissolvenza
+                loadingLogo.style.opacity = "0"; // Dissolvi anche il logo
+            }, 1000); // Mostra il logo per 1 secondo
+    
+            // Rimuovi la schermata di caricamento completamente dopo la dissolvenza
+            setTimeout(() => {
+                loadingScreen.style.display = "none";
+    
+                // Mostra la scroll indicator dopo il caricamento
+                scrollIndicator.style.display = "block";
+            }, 3000); // Tempo totale: 1s (logo) + 2s (dissolvenza)
+        });
     </script>
+    
     <div id="desktop-blocker" style="display: none;">
         <div class="blocker-message">
             <h1>Questo sito è ottimizzato solo per dispositivi mobili!</h1>
@@ -126,11 +131,11 @@
                             Mancano solo <span id="countdown-timer"></span>
                         </p> 
                     </div>
+                    <!-- GIF per indicare lo scroll -->
+                    <div class="scroll-indicator" id="scrollIndicator">
+                        <img src="img/scrolldown.gif" alt="Scroll Down">
+                    </div>
                 </div>
-                        <!-- GIF per indicare lo scroll -->
-            <div class="scroll-indicator">
-                <img src="img/scrolldown.gif" alt="Scroll down">
-            </div>
             </div>
         </div>
     </header>
@@ -143,7 +148,7 @@
                 Novità in "The Wedding"
             </h1>
             <p>
-                Sapevi che cerimonia e banchetto si terranno nello stesso posto? 
+                Sapevi che cerimonia e ricevimento si terranno nello stesso posto? 
             </p>
             <p>
                 Zero sbatti!

@@ -1136,13 +1136,14 @@
             bottom: 20px;
             left: 50%;
             transform: translateX(-50%);
-            z-index: 1000;
+            z-index: 1000; /* Deve stare sopra gli altri elementi */
             animation: fade-in 1.5s ease-in-out infinite;
+            display: none; /* Nasconde inizialmente la GIF */
         }
         
         .scroll-indicator img {
             width: 50px; /* Dimensione della GIF */
-            height: auto;
+            height: auto; /* Mantieni le proporzioni */
         }
         
         /* Animazione opzionale per la GIF */
@@ -1154,4 +1155,5 @@
                 opacity: 1;
             }
         }
+        
         
