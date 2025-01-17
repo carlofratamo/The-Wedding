@@ -1131,4 +1131,27 @@
             transform: scale(2.5); /* Ingrandisce il logo */
         }
 
-                
+        .scroll-indicator {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            animation: fade-in 1.5s ease-in-out infinite;
+        }
+        
+        .scroll-indicator img {
+            width: 50px; /* Dimensione della GIF */
+            height: auto;
+        }
+        
+        /* Animazione opzionale per la GIF */
+        @keyframes fade-in {
+            0%, 100% {
+                opacity: 0.5;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+        
